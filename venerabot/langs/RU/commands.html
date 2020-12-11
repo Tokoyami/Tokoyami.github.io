@@ -1,0 +1,61 @@
+<html style="background-color: black;">
+    <head><title>Venera - Discord bot</title>
+        <link rel="shortcut icon" href="../../assets/images/venera.png" type="image/x-icon"></head>
+    <body onload="onload()">
+        <script>
+            function openpage() {
+                try {
+                    window.open("./index.html");
+                    window.close()
+                } catch(err) {
+                    alert(`Ошибка: "${err}". Попробуйте отключить блокировщик всплывающих окон. Если это не сработает свяжитесь со мной: Fumikage Tokoyami#6666`)
+                }
+            }
+            function onload() {
+                document.getElementById('loading').style.display="none"
+            }
+        </script>
+        <pre style="color: whitesmoke;">
+Список команд:
+
++help - показать этот список
+            
++ping - Пинг бота
+            
++sum - сумма чисел которых вы написали
+            
++creator - создатель бота
+            
++kick - кикает упомянотого пользователя
+            
++ban - банит упомянотого пользователя
+            
++members - Количество участников на сервере
+            
++eject - выкинуть упомянотого пользователя (Among Us)
+            
++cat - случайная кошка
+            
++search - Ищет в Яндекс.Словаре запросы по русскому
+            
++ensearch - Ищет в Яндекс.Словаре запросы по английскому
+            
++translate - перевести текст на русский
+            
++entranslate - перевести на английский
+            
++urban - ищет в urban dictionary значение слова
+            
++play (url) - играть музыку из youtube
+            
++stop - остановить музыку
+            
++fox - случайный лис
+            
++version - информация о версии бота
+            
++giveaway (время в часах) (награда) - сделать конкурс!</pre>
+        <button style="background-color: rgb(24, 24, 180); height: 50px; width: 100px;" onclick="openpage()"><font style="color: red;" size="3">Вернуться на главную</font></button>
+        <img src="../../assets/images/loading.gif" style="display: block; height: 100px; width: 100px; margin-left: 50%; margin-bottom: 50%;" id="loading">
+    </body>
+</html>

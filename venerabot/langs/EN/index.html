@@ -1,0 +1,36 @@
+<html style="background-color: black;">
+    <head><title>Venera - Discord bot</title>
+        <link rel="shortcut icon" href="../../assets/images/venera.png" type="image/x-icon"></head>
+    <body onload="onload()">
+        <script>
+            function alertbox(text="Error") {
+                alert(text)
+            }
+            function openpage() {
+                try {
+                    window.open("https://discord.com/oauth2/authorize?client_id=758974666156539915&scope=bot&permissions=2147483647","add Venera","width=400,height=700");
+                } catch(err) {
+                    try {
+                        alertbox(`Error: "${err}". Try disabling the pop-up blocker. If this doesn't help contact the developer: Fumikage Tokoyami#6666`)
+                    } catch {
+                        alert(`Error with displaying another error window: "${err}". Try disabling the pop-up blocker. If this doesn't help contact the developer: Fumikage Tokoyami#6666`)
+                    }
+                }
+            }
+            function commands() {
+                window.open("./commands.html")
+                window.close()
+            }
+            function onload() {
+                document.getElementById('loading').style.display="none"
+            }
+        </script>
+        <img src="../../assets/images/venera.png" alt="Logo">
+        <br>
+        <h3 style="color: whitesmoke;">Add Venera to your server!</h3>
+        <br>
+        <button style="background-color: rgb(24, 24, 180); height: 50px; width: 100px;" onclick="openpage()"><font style="color: red;" size="6">Add</font></button>
+        <button style="background-color: rgb(24, 24, 180); height: 50px; width: 100px;" onclick="commands()"><font style="color: red;" size="2">List of commands</font></button>
+        <img src="../../assets/images/loading.gif" style="display: block; height: 100px; width: 100px; margin-left: 50%; margin-bottom: 50%;" id="loading">
+    </body>
+</html>

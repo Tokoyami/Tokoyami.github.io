@@ -1,0 +1,56 @@
+<html style="background-color: black;">
+    <head><title>Venera - Discord bot</title>
+        <link rel="shortcut icon" href="../../assets/images/venera.png" type="image/x-icon"></head>
+    <body onload="onload()">
+        <script>
+            function openpage() {
+                try {
+                    window.open("./index.html");
+                    window.close()
+                } catch(err) {
+                    alert(`Error: "${err}". Try disabling the pop-up blocker. If this doesn't help contact the developer: Fumikage Tokoyami#6666`)
+                }
+            }
+            function onload() {
+                document.getElementById('loading').style.display="none"
+            }
+        </script>
+        <pre style="color: whitesmoke;">
+List of commands:
++help - show this list
+            
++ping - ping of the bot
+            
++sum - sum of the numbers you wrote
+            
++creator - bot Creator
+            
++kick - kicks the mentioned user
+            
++ban - bans the mentioned user
+            
++members - Number of participants on the server
+            
++eject - throw out the mentioned user (among us)
+            
++cat - random cat
+            
++search - Searches in Yandex.Query
+            
++urban - searches the urban dictionary for the meaning of the word
+            
++play (url) - play music from youtube
+            
++stop - stop music
+            
++fox - random Fox
+            
++version - information about the bot's version
+            
++giveaway (time in hours) (reward) - make a giveaway!
+            
+Poke all. Of course, the bot is in beta, but it will be updated. Wait!</pre>
+        <button style="background-color: rgb(24, 24, 180); height: 50px; width: 100px;" onclick="openpage()"><font style="color: red;" size="3">back to the main page</font></button>
+        <img src="../../assets/images/loading.gif" style="display: block; height: 100px; width: 100px; margin-left: 50%; margin-bottom: 50%;" id="loading">
+    </body>
+</html>

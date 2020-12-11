@@ -1,0 +1,29 @@
+<html style="background-color: black;">
+    <head><title>Venera - Discord bot</title>
+        <link rel="shortcut icon" href="../../assets/images/venera.png" type="image/x-icon"></head>
+    <body onload="onload()">
+        <script>
+            function openpage() {
+                try {
+                    window.open("https://discord.com/oauth2/authorize?client_id=784036084497252353&scope=bot&permissions=2147483647","add Venera","width=400,height=700");
+                } catch(err) {
+                    alert(`Ошибка: "${err}". Попробуйте отключить блокировщик всплывающих окон. Если это не сработает свяжитесь со мной: Fumikage Tokoyami#6666`)
+                }
+            }
+            function commands() {
+                window.open('./commands.html')
+                window.close()
+            }
+            function onload() {
+                document.getElementById('loading').style.display="none"
+            }
+        </script>
+        <img src="../../assets/images/venera.png" alt="Logo">
+        <br>
+        <h3 style="color: whitesmoke;">Добавьте Венеру на свой сервер!</h3>
+        <br>
+        <button style="background-color: rgb(24, 24, 180); height: 50px; width: 100px;" onclick="openpage()"><font style="color: red;" size="3">Добавить</font></button>
+        <button style="background-color: rgb(24, 24, 180); height: 50px; width: 100px;" onclick="commands()"><font style="color: red;" size="3">Список команд</font></button>
+        <img src="../../assets/images/loading.gif" style="display: block; height: 100px; width: 100px;" id="loading">
+    </body>
+</html>
