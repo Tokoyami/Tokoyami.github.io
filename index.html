@@ -1,6 +1,13 @@
 <html>
     <head><title>Tokoyami projects</title>
     <link rel="shortcut icon" href="/images/tokoyami.jpg" type="image/x-icon"></link>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tokoyami projects">
+    <meta property="og:description" content="Site created by Fumikage Tokoyami#6666 to publish his projects. You can find fun projects or discord bots to make your discord server easier.">
+    <meta property="og:image:secure_url" content="https://tokoyami.github.io/images/tokoyami.jpg">
+    <meta property="og:image:width" content="256">
+    <meta property="og:image:height" content="256">
+    <meta property="og:image:alt" content="Photo of github profile picture. (https://github.com/Tokoyami)">
     <style>
         a {
             text-decoration: none;
@@ -13,13 +20,13 @@
             var url = new URL(url_string);
             var language = url.searchParams.get("lang");
             if(language === "ru") {
-                document.getElementById('text-lukes-og-server').style.display = "none"
+                document.getElementById('lukesogserver').style.display = "none"
                 document.getElementById('change-lang').textContent = "Change to English"
                 document.getElementById('change-lang').href = "/"
             }
         </script>
         <a href="/venerabot/index.html" style="font-size: 30px; color: whitesmoke;"><img src="./venerabot/assets/images/venera.png">Venera</a>
-        <a id="text-lukes-og-server" href="/lukesogserver" style="font-size: 30px; color: whitesmoke; display: inline;"><img src="https://cdn.discordapp.com/icons/771013646704574534/a_70ddd2cdad04287a283e8ac4378f5221.gif">Luke's og server</a>
+        <div id='lukesogserver' style="display: inline;"><a href="/lukesogserver" style="font-size: 30px; color: whitesmoke; display: inline;"><img src="https://cdn.discordapp.com/icons/771013646704574534/a_70ddd2cdad04287a283e8ac4378f5221.gif">Luke's og server</a></div>
         <p style="text-align: center/bottom;"><a href="/?lang=ru" id="change-lang">Изменить на русский язык</a></p>
     </body>
 </html>
