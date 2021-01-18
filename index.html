@@ -8,6 +8,14 @@
     </style></head>
     <body style="background-color: black;">
         <p style="color: whitesmoke; font-size: 30px;"><a href="https://github.com/Tokoyami">Tokoyami</a> projects storage</p>
+        <script>
+            var url_string = window.location.href.toString()
+            var url = new URL(url_string);
+            var language = url.searchParams.get("lang");
+            if(language === "ru") {
+                console.log('ru')
+            }
+        </script>
         <a href="/venerabot/index.html" style="font-size: 30px; color: whitesmoke;"><img src="./venerabot/assets/images/venera.png">Venera</a>
         <a href="/lukesogserver" style="font-size: 30px; color: whitesmoke;"><img src="https://cdn.discordapp.com/icons/771013646704574534/a_70ddd2cdad04287a283e8ac4378f5221.gif">Luke's og server</a>
         <p style="text-align: center/bottom;"><a href="/index.html?lang=ru">Изменить на русский язык</a></p>
