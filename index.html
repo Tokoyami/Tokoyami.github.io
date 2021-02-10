@@ -15,19 +15,28 @@
         }
     </style></head>
     <body style="background-color: black;">
-        <p style="color: whitesmoke; font-size: 30px;"><a href="https://github.com/Tokoyami">Tokoyami</a> projects storage</p>
+        <p id="text-en" style="color: whitesmoke; font-size: 30px; display: inline; top: 100%;"><a href="https://github.com/Tokoyami">Tokoyami</a> projects</p>
+        <p id="text-ru" style="color: whitesmoke; font-size: 30px; display: none; top: 100%;">Проекты от <a href="https://github.com/Tokoyami">Tokoyami</a></p>
         <script>
-            var url_string = window.location.href.toString()
-            var url = new URL(url_string);
-            var language = url.searchParams.get("lang");
-            if(language === "ru") {
-                document.getElementById('lukesogserver').style.display = "none"
-                document.getElementById('change-lang').textContent = "Change to English"
-                document.getElementById('change-lang').href = "/"
+            function changedText(value) {
+                if(value === "1") {
+                    document.cookie = '1'
+                    window.location.reload()
+                } else if(value === "2") {
+                    document.cookie = '2'
+                    document.getElementById('lukesogserver').style.display = 'none'
+                    document.getElementById('text-en').style.display = 'none'
+                    document.getElementById('text-ru').style.display = 'inline'
+                } else {
+                    window.location.reload()
+                }
             }
         </script>
         <a href="/venerabot/index.html" style="font-size: 30px; color: whitesmoke;"><img src="./venerabot/assets/images/venera.png">Venera</a>
-        <div id='lukesogserver' style="display: inline;"><a href="/lukesogserver" style="font-size: 30px; color: whitesmoke; display: inline;"><img src="https://cdn.discordapp.com/icons/771013646704574534/a_70ddd2cdad04287a283e8ac4378f5221.gif">Luke's og server</a></div>
-        <p style="text-align: center/bottom;"><a href="/?lang=ru" id="change-lang">Изменить на русский язык</a></p>
+        <div id='lukesogserver' style="display: inline; margin-left: 10%; margin-bottom: 10%;"><a href="/lukesogserver" style="font-size: 30px; color: whitesmoke; display: inline;"><img src="https://cdn.discordapp.com/icons/771013646704574534/a_70ddd2cdad04287a283e8ac4378f5221.gif">Luke's og server</a></div>
+        <select onchange="changedText(this.value)" >
+        <option value="1">English</option>
+        <option value="2">Русский</option>
+        </select>
     </body>
 </html>
