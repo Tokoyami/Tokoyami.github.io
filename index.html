@@ -13,12 +13,16 @@
         a {
             text-decoration: none;
         }
+        .project {
+        margin: 0;
+        top: 2.25em;
+    }
     </style></head>
     <body style="background-color: black;">
-        <p id="text-en" style="color: whitesmoke; font-size: 30px; display: inline; top: 100%;"><a href="https://github.com/Tokoyami">Tokoyami</a> projects</p>
-        <p id="text-ru" style="color: whitesmoke; font-size: 30px; display: none; top: 100%;">Проекты от <a href="https://github.com/Tokoyami">Tokoyami</a></p>
+        <p id="text-en" class="project" style="color: whitesmoke; font-size: 30px; display: block;"><a href="https://github.com/Tokoyami">Tokoyami</a> projects</p>
+        <p id="text-ru" class="project" style="color: whitesmoke; font-size: 30px; display: none;">Проекты от <a href="https://github.com/Tokoyami">Tokoyami</a></p>
         <script>
-            function changedText(value) {
+            function changedLang(value) {
                 if(value === "1") {
                     document.cookie = '1'
                     window.location.reload()
@@ -26,7 +30,7 @@
                     document.cookie = '2'
                     document.getElementById('lukesogserver').style.display = 'none'
                     document.getElementById('text-en').style.display = 'none'
-                    document.getElementById('text-ru').style.display = 'inline'
+                    document.getElementById('text-ru').style.display = 'block'
                 } else {
                     window.location.reload()
                 }
@@ -34,9 +38,9 @@
         </script>
         <a href="/venerabot/index.html" style="font-size: 30px; color: whitesmoke;"><img src="./venerabot/assets/images/venera.png">Venera</a>
         <div id='lukesogserver' style="display: inline; margin-left: 10%; margin-bottom: 10%;"><a href="/lukesogserver" style="font-size: 30px; color: whitesmoke; display: inline;"><img src="https://cdn.discordapp.com/icons/771013646704574534/a_70ddd2cdad04287a283e8ac4378f5221.gif">Luke's og server</a></div>
-        <select onchange="changedText(this.value)" >
-        <option value="1">English</option>
-        <option value="2">Русский</option>
+        <select onchange="changedLang(this.value)" style="bottom: 100%; display: block;">
+        <option value="1" style="background-image: url(/images/usa.svg);">English</option>
+        <option value="2" style="background-image: url(/images/russia.png);">Русский</option>
         </select>
     </body>
 </html>
